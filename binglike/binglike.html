@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bing</title>
+        <style>
+            body{
+                background-color:black;
+                background-image:url('BingWallpaper.jpg');
+                background-repeat:repeat-x;
+                background-attachment:fixed;
+                background-position:center top;
+                background-size:cover;
+                margin: auto 0;
+            }
+            *{
+                padding: 5px;
+                margin: 0;
+            }
+            .logo{
+                float:left;
+                margin-left:30px;
+                height:40px;
+            }
+            ul,a{
+                font-size: 18px;
+                list-style: none;
+                text-decoration: none;
+                color: #d3d1e8;
+                width: 100px;
+                text-align: left;
+                border: 0px solid black;
+                border-radius: 5px;
+                margin-top: 1px;
+            }
+            a{
+                display: block;
+            }
+            .plat{
+                display: none;
+            }
+            .nav{
+                float: left;
+                margin-left: 5px;
+            }
+            .nav:hover .plat{
+                background-color: white;
+                width: max-content;
+                display: block;
+                clear: both;
+            }
+            .plat li:hover>a{
+                background-color: rgb(131, 128, 128);
+            }
+            form{
+	            float: left;
+	            padding: 5px;
+	            margin-left: 0px;
+            }
+            .input-text{
+	            /*消除input的边框*/
+	            border: 0;
+                border-top-left-radius:10px;
+                border-top-right-radius:10px;
+                border-bottom-left-radius:10px;
+                border-bottom-right-radius:10px;
+	            width: 550px;
+	            height: 30px;
+                background-color: #fff;
+	            line-height: 30px;
+	            float: left;
+	            /*去掉文本框点击后显示的高亮效果*/
+	            outline: none;
+            }
+            .input-button{
+	            border: 0;
+                border-top-left-radius:2px;
+                border-top-right-radius:2px;
+                border-bottom-left-radius:2px;
+                border-bottom-right-radius:2px;
+	            width: 60px;
+	            height: 25px;
+	            float: left;
+	            cursor: pointer;
+                position: relative;
+                top: 4px;
+                left: 250px;
+                text-align:center;
+            }
+            .search-box{
+	            position: absolute;
+	            top: 25%;
+	            left: 15%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="headline">
+            <img src="bing-logo.png" alt="Bing" class="logo">
+            <ul class="nav">
+                <a href="#">Picture</a>
+            </ul>
+            <ul class="nav">
+                <a href="#">Video</a>
+            </ul>
+            <ul class="nav">
+                <a href="#">More</a>
+                <ul class="plat">
+                    <li><a href="#">Map</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </ul>
+        </div>
+        <div class="search-box">
+            <form id="search-form">
+                <input type="text" class="input-text" id="search-input" name="q" />
+                <br>
+                <input type="submit" class="input-button"  value="Search"/>
+            </form>
+        </div>
+    </body>
+</html>
