@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>计时器</title>
+        <style>
+            div{
+                font-size: 50px;
+                text-align: center;
+            }
+            #time{
+                color: red;
+            }
+            #push{
+                font-size: large;
+                width: 233px;
+                height: 60px;
+            }
+        </style>
+        <script>
+            var t = 0 ; click_times = 0 ;
+        </script>
+    </head>
+    
+    <body>
+        
+        <div>
+            <button id="push" onclick="update();">开始计时</button>
+            <p>Time passed: <b id="time">0</b> s</p>
+        </div>
+        <script>
+            var ct = click_times , run = null;
+        
+            function update(){
+                ct++;
+                if(ct % 2 == 0){
+                    clearInterval(run);push.innerHTML = '继续计时';
+                }else{
+                    run = setInterval("timer()",1000);push.innerHTML = '暂停计时';
+                }
+            }
+            
+            function timer(){
+                t++;
+                time.innerHTML = t ;
+            }
+        </script>
+    </body>
+</html>
+
